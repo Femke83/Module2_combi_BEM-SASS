@@ -1,0 +1,40 @@
+$purple: rgb(94, 2, 94);
+
+@mixin square {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+
+  }
+  
+  @mixin circle {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+
+  .square {
+    @include square;
+    background-color: $purple;
+    
+   
+  }
+  
+  .square__circle {
+    @include circle;
+    background-color: #fff;
+    
+  }
+  
+  .square-reversed {
+    @include square;
+    background-color: #fff;
+    border: 1px solid black;
+  }
+  
+  .square__circle--reversed {
+    @include circle;
+    background-color:$purple;
+  }
